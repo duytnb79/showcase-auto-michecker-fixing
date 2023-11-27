@@ -1,0 +1,112 @@
+.component.richtext sub,
+.component.richtext sup {
+    font-style: inherit;
+    font-weight: inherit
+}
+
+body {
+    visibility: visible !important
+}
+.resizeable-comp {
+    position: relative;
+    margin: 0;
+    height: auto !important;
+    display: block;
+    width: 100%
+}
+/* ISSO*/
+.score_container{
+    display: flex;
+    gap:10px;
+    padding: 0;
+    margin: 0 0 30px;
+}
+.score_container .score_container_box{
+    background: #fff;
+    border-radius: 10px;
+    width: 180px;
+    text-align: center;
+    padding: 20px;
+}
+.score_container .score_container_box .score_container_box_title{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.score_container .score_container_box .score_container_box_img{
+    width: 47px;
+    margin: 20px 0;
+}
+.score_container .score_container_box .score_container_box_txt{
+    text-align: left;
+}
+@media(max-width:768px) {
+    .score_container{
+        flex-wrap: wrap;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .score_container .score_container_box{
+        width: 37%;
+    }
+}
+/* ISSO*/
+.function_seo_row{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.resizeable-box_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: start;
+}
+.resizeable-box_container .resizeable-box {
+    max-width: 180px;
+    text-align: center;
+}
+.resizeable-box_container .resizeable-box .resizeable-box_title {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.resizeable-box_container .resizeable-box .resizeable-box_title span {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+.resizeable-box_container .resizeable-box .resizeable-box_txt {
+    font-size: 0.8rem;
+    text-align: left;
+}
+.resizeable-box_container .resizeable-box img {
+    max-width: 40px;
+    margin: 25px 0;
+}
+.resizeable-box_container .resizeable-box .top_img-col {
+    margin: 15px 0;
+}
+.function_seo_row .function_seo_row_ac_txt{
+    margin: 30px 70px;
+}
+@media(max-width:768px) {
+    .projectsBtn_row .projects_col p a {
+        width: auto;
+    }
+    .function_seo_row {
+        max-width: 100%;
+        margin: 2% auto;
+    }
+    .resizeable-box_container {
+        gap: 4%;
+    }
+    .resizeable-box_container .resizeable-box {
+        margin: 3% 0;
+    }
+    .function_seo_row .function_seo_row_ac_txt {
+        margin: 1%;
+    }
+    .resizeable-box_container .resizeable-box img,
+    .resizeable-box_container .resizeable-box .top_img-col {
+        margin: 1%;
+    }
+}
