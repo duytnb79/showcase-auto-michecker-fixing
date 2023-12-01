@@ -45,6 +45,14 @@ export default defineComponent({
       type: String as PropType<Mode>,
       default: "split",
     },
+    prevUrl: {
+      type: String,
+      default: "",
+    },
+    currentUrl: {
+      type: String,
+      default: "",
+    },
     theme: {
       type: String as PropType<Theme>,
       default: "dark",

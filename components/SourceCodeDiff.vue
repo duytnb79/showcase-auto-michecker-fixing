@@ -3,7 +3,7 @@
     <div>
       <h2 class="text-3xl font-bold mb-2">URL Diff</h2>
       <div class="gap-2 py-2 flex flex-col">
-        <label class="text-sm text-black font-medium" for="url1">URL 1:</label>
+        <label class="text-sm text-black font-medium" for="url1">URL 1: </label>
         <input
           class="w-full p-1 bg-yellow-100 px-4 rounded-md"
           v-model="url1"
@@ -14,7 +14,7 @@
     </div>
     <div>
       <div class="gap-2 py-2 flex flex-col">
-        <label class="text-sm text-black font-medium" for="url2">URL 2:</label>
+        <label class="text-sm text-black font-medium" for="url2">URL 2: </label>
         <input
           class="w-full p-1 bg-yellow-100 px-4 rounded-md"
           v-model="url2"
@@ -31,7 +31,7 @@
     <div v-if="initHtml && diffHtml">
       <div>
         <h2 class="font-bold mb-4 text-3xl mt-4">Diff Checker</h2>
-        <VueDiff :prev="initHtml" :current="diffHtml"></VueDiff>
+        <VueDiff :prev="initHtml" :current="diffHtml" :prevUrl="url1" :currentUrl="url2"></VueDiff>
       </div>
     </div>
   </div>
@@ -58,8 +58,8 @@ export default defineComponent({
 
     onMounted(async () => {
       // Set default URLs for testing
-      url1.value = "https://d15d0zlgq9wfnq.cloudfront.net/index.html";
-      url2.value = "https://d15d0zlgq9wfnq.cloudfront.net/tmp_index.html";
+      url1.value = this.urlBefore;
+      url2.value = this.urlAfter;
     });
 
     return {
